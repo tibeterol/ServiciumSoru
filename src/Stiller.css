@@ -1,0 +1,31 @@
+body{
+    text-align:center;
+    background-color: black;
+    color:yellow;
+}
+#sayiBilgi{
+    margin-top: 40px;
+}
+#btnStart{
+    margin-top:40px;
+}
+
+#btnTahmin{
+    background-color:green
+}
+.oyunBaslik{
+    margin-top:80px;
+}
+#artilar{
+    color:greenyellow;
+}
+#finishGame{
+    margin-top:30px;
+}
+#btnEnd{
+    background-color:red;
+    margin-bottom:30px;
+}
+#bitisYazi{
+    margin-top:25px;
+}

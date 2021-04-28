@@ -1,25 +1,51 @@
-import logo from './logo.svg';
-import './App.css';
+//Tibet Erol
+import React, { Component } from 'react'
+//import './App.css';
+import './Stiller.css';
+import Oyun from './components/Oyun'
+ class App extends Component {
+   state={
+     kilit:true
+   }
+   kilitAc=(e)=>{
+     this.setState({
+       kilit: ! this.state.kilit
+     })
+   }
+  render() {
+    //Destructing
+    const {kilit}=this.state;
+    return (
+      <div className="container">
+         
+       { 
+        kilit?
+           <div >
+           
+           <h1 className="oyunBaslik">OYA's GAME by TE</h1>
+           <hr/>
+           
+           <p>Hello to the code solver game !</p>
+           <hr/>
+           <h2>GAME RULES</h2>
+           <hr/>
+           
+           <p>You will need to guess a 4 digits number.</p>
+           <p>Numbers are not repeating and cannot start with 0.</p>
+           <p>"+" sign means a digit at its place while "-" </p>
+           <p>means a digit exists in the number but it is not at its exact place.</p>
+           <p>If there is no sign , it means that digit is not correct.</p>
+           <button type="button" className="btn btn-primary" id="btnStart" onClick={this.kilitAc}
+             >Start Game</button>
+      
+        </div>
+         :
+          <Oyun /> 
+        }
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+      </div>
+     
+    )
+  }
 }
-
-export default App;
+export default App
